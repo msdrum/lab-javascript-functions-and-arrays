@@ -50,7 +50,29 @@ function sumNumbers(numbers) {
 }
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(mixedArr) {
+  let realNum = 0;
+
+  for (let i = 0; i < mixedArr.length; i++) {
+    if (typeof mixedArr[i] === "object") {
+      throw new Error("Unsupported data type sir or ma'am");
+
+      //console.log(realNum);
+    }
+    if (typeof mixedArr[i] === "string") {
+      realNum += mixedArr[i].length;
+      //console.log(realNum);
+    }
+    if (typeof mixedArr[i] === "number") {
+      realNum += mixedArr[i];
+      //console.log(mixedArr[i]);
+    }
+    if (mixedArr[i] === true) {
+      realNum += 1;
+    }
+  }
+  return realNum;
+}
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
