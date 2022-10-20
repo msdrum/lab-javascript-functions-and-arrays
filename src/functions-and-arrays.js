@@ -80,14 +80,9 @@ const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(arr) {
   let total = null;
-  let counter = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    counter += arr.length;
-    if (counter === 0) {
-    } else {
-      total = sumNumbers(arr) / arr.length;
-    }
+    total = sumNumbers(arr) / arr.length;
   }
   return total;
 }
@@ -106,7 +101,18 @@ const wordsArr = [
   "palace",
 ];
 
-function averageWordLength() {}
+function averageWordLength(arr) {
+  let counter = null;
+
+  if (arr.length === 0) {
+    return counter;
+  } else {
+    for (let i = 0; i < arr.length; i++) {
+      counter += arr[i].length;
+    }
+    return counter / arr.length;
+  }
+}
 
 // Bonus - Iteration #4.1
 function avg() {}
