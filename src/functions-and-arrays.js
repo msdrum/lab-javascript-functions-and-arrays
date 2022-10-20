@@ -26,8 +26,8 @@ function findLongestWord(words) {
 
   for (let i = 0; i < words.length; i++) {
     if (words[i].length > lengthCheck) {
-      lengthCheck = words[i].length;
-      longest = words[i];
+      lengthCheck = words[i].length; // recebe a quantidade de caracteres do índice iterado e se for maior que o anterior, o substitui.
+      longest = words[i]; // adiciona a palavra com a maior quantidade de caracteres.
     } else {
       if (words.length === 0) {
         longest = null;
@@ -40,7 +40,14 @@ function findLongestWord(words) {
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(numbers) {
+  let counter = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    counter += numbers[i];
+  }
+  return counter;
+}
 
 // Iteration #3.1 Bonus:
 function sum() {}
