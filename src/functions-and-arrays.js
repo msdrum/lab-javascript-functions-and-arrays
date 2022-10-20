@@ -56,16 +56,12 @@ function sum(mixedArr) {
   for (let i = 0; i < mixedArr.length; i++) {
     if (typeof mixedArr[i] === "object") {
       throw new Error("Unsupported data type sir or ma'am");
-
-      //console.log(realNum);
     }
     if (typeof mixedArr[i] === "string") {
       realNum += mixedArr[i].length;
-      //console.log(realNum);
     }
     if (typeof mixedArr[i] === "number") {
       realNum += mixedArr[i];
-      //console.log(mixedArr[i]);
     }
     if (mixedArr[i] === true) {
       realNum += 1;
@@ -74,7 +70,7 @@ function sum(mixedArr) {
   return realNum;
 }
 
-// Iteration #4: Calculate the average
+// Iteration #4.1: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
@@ -114,8 +110,27 @@ function averageWordLength(arr) {
   }
 }
 
-// Bonus - Iteration #4.1
-function avg() {}
+// Bonus - Iteration #4.3
+function avg(mixedArr) {
+  let realNum = null;
+
+  if (mixedArr.length === 0) {
+    return realNum;
+  } else {
+    for (let i = 0; i < mixedArr.length; i++) {
+      if (typeof mixedArr[i] === "string") {
+        realNum += mixedArr[i].length;
+      }
+      if (typeof mixedArr[i] === "number") {
+        realNum += mixedArr[i];
+      }
+      if (mixedArr[i] === true) {
+        realNum += 1;
+      }
+    }
+    return realNum / mixedArr.length;
+  }
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
