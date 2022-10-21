@@ -147,7 +147,24 @@ const wordsUnique = [
   "bring",
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(wordsUnique) {
+  let newArray = null;
+
+  if (wordsUnique.length === 0) {
+    return newArray;
+  } else {
+    newArray = [];
+
+    for (let i = 0; i < wordsUnique.length; i++) {
+      if (newArray.includes(wordsUnique[i])) {
+        continue;
+      } else {
+        newArray.push(wordsUnique[i]);
+      }
+    }
+    return newArray;
+  }
+}
 
 // Iteration #6: Find elements
 const wordsFind = [
