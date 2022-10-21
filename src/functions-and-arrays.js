@@ -178,7 +178,20 @@ const wordsFind = [
   "disobedience",
 ];
 
-function doesWordExist() {}
+function doesWordExist(wordsFind, wordToSearch) {
+  let word = false;
+
+  if (wordsFind.length === 0) {
+    return null;
+  } else {
+    if (wordsFind.includes(wordToSearch) === true) {
+      word = true;
+      return word;
+    } else {
+      return word;
+    }
+  }
+}
 
 // Iteration #7: Count repetition
 const wordsCount = [
