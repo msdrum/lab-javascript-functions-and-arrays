@@ -184,7 +184,7 @@ function doesWordExist(wordsFind, wordToSearch) {
   if (wordsFind.length === 0) {
     return null;
   } else {
-    if (wordsFind.includes(wordToSearch) === true) {
+    if (wordsFind.includes(wordToSearch)) {
       word = true;
       return word;
     } else {
@@ -208,7 +208,22 @@ const wordsCount = [
   "matter",
 ];
 
-function howManyTimes() {}
+function howManyTimes(wordsCount, wordToSearch) {
+  let word = 0;
+
+  if (wordsCount.length === 0) {
+    return word;
+  } else {
+    for (let i = 0; i < wordsCount.length; i++) {
+      if (wordsCount[i].includes(wordToSearch)) {
+        word += 1;
+      } else {
+        continue;
+      }
+    }
+  }
+  return word;
+}
 
 // Iteration #8: Bonus
 const matrix = [
