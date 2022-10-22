@@ -291,7 +291,42 @@ const matrix = [
   ],
 ];
 
-function greatestProduct() {}
+function greatestProduct(matrix) {
+  let product = 1;
+
+  const numberOfRows = matrix.length;
+  const numberOfColumns = matrix[0].length;
+
+  for (let row = 0; row < numberOfRows; row++) {
+    for (let column = 0; column < numberOfColumns - 3; column++) {
+      let rowProduct =
+        matrix[row][column] *
+        matrix[row][column + 1] *
+        matrix[row][column + 2] *
+        matrix[row][column + 3];
+
+      if (rowProduct > product) {
+        product = rowProduct;
+      }
+    }
+  }
+
+  for (let column = 0; column < numberOfColumns; column++) {
+    for (let row = 0; row < numberOfRows - 3; row++) {
+      let columnProduct =
+        matrix[row][column] *
+        matrix[row + 1][column] *
+        matrix[row + 2][column] *
+        matrix[row + 3][column];
+
+      if (columnProduct > product) {
+        product = columnProduct;
+      }
+    }
+  }
+
+  return product;
+}
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
